@@ -7,11 +7,12 @@ import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
 import java.util.logging.Logger
 
+
 @Component
 class KafkaConsumerService {
 
     companion object {
-        const val TOPIC_NAME = "test-topic"
+        private const val TOPIC_NAME = "test-topic"
         private val logger = Logger.getLogger(KafkaConsumerService::class.java.name)
     }
 
@@ -25,6 +26,5 @@ class KafkaConsumerService {
 
         logger.info("Mensagem processada com sucesso")
     }
-
 
 }
